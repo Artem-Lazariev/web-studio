@@ -178,7 +178,23 @@ body {
 
 .work-list {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
+}
+
+.work-list div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: #2f303a;
+    opacity: 0.8;
+    text-transform: uppercase;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    top:-68px;
 }
 
 /* TEAMS  */
@@ -186,6 +202,10 @@ body {
     padding: 94px 0;
     background-color: var(--bg-team-color);
 }
+.blue{
+    color: var(--accent-color);
+}
+
 
 .teams-title {
     font-weight: 700;
@@ -231,6 +251,29 @@ body {
     padding-bottom: 30px;
 }
 
+/* SVG іконки */
+.teams-messengers {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.teams-messengers svg {
+    fill: #afb1b8;
+    border-radius: 50%;
+    padding: 10px;
+    height: 44px;
+    width: 44px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.teams-messengers svg:hover {
+    fill: var(--second-accent-color);
+    background-color: var(--accent-color);
+}
+
 /* ПІДВАЛ */
 .footer {
     padding: 60px 0;
@@ -238,13 +281,13 @@ body {
 }
 
 .footer-logo {
-    font-family: var(--second-family);
+    font-family: var(--second-font);
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.03em;
     color: var(--second-accent-color);
     padding-bottom: 20px;
-    display: inline-block;/**/
+    display: inline-block;
 }
 
 .footer-logo span {
