@@ -1,3 +1,4 @@
+
 :root {
     --logo-header-color: #000;
     --menu-color: #212121;
@@ -6,7 +7,7 @@
     --bg-team-color: #F5F4FA;
     --bg-button: #F5F4FA;
     --accent-color: #2196F3;
-    --second-accent-color: #fff;
+    --second-accent-color: #ffffff;
     --contact-footer-color: rgba(255, 255, 255, 0.6);
     --bg-footer-color: #2F303A;
     --border-header: #ECECEC;
@@ -76,12 +77,22 @@ body {
     font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    display: flex;
 }
 
 .header-link:hover,
-.header-contact-link:hover {
+.header-link:focus,
+.header-contact-link:hover,
+.header-contact-link:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
     transition: 0.6s;
+}
+.header-contact-link svg {
+    width: 24px;
+    height: 16px;
+    display: inline-block;
+    fill: currentColor;
 }
 
 /* HERO */
@@ -361,7 +372,7 @@ body {
     border-right: 1px solid var(--border-portfolio);
     border-left: 1px solid var(--border-portfolio);
     flex-basis: calc((100% - 60px) / 3);/**/
-    
+
 }
 
 .portfolio-item:hover {
