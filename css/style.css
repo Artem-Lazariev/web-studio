@@ -1,4 +1,3 @@
-
 :root {
     --logo-header-color: #000;
     --menu-color: #212121;
@@ -79,6 +78,7 @@ body {
     color: var(--text-color);
     display: flex;
 }
+
 
 .header-link:hover,
 .header-link:focus,
@@ -207,7 +207,47 @@ body {
     position: relative;
     top:-68px;
 }
+.company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 25px;
+}
+.company p{
+    font-weight: bold;
+    font-size: 36px;
+}
+.company-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.company-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #757575;
+    color: #757575;
+    fill: #757575;
+    width: 170px;
+    height: 92px;
+}
+.company-list li:hover{
+    color: #2196f3;
+    border-color: #2196f3;
+    transition: 0.6s
+}
+.company-list svg, .company-list use {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
 
+.work-item {}
 /* TEAMS  */
 .teams {
     padding: 94px 0;
