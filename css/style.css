@@ -406,7 +406,7 @@ body {
     color: var(--menu-color);
     border-radius: 4px;
     cursor: pointer;
-}/**/
+}
 .portfolio-blue {
     background-color: var(--accent-color);
     opacity: 0;
