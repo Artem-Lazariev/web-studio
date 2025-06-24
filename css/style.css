@@ -6,7 +6,7 @@
     --bg-team-color: #F5F4FA;
     --bg-button: #F5F4FA;
     --accent-color: #2196F3;
-    --second-accent-color: #fff;
+    --second-accent-color: #ffffff;
     --contact-footer-color: rgba(255, 255, 255, 0.6);
     --bg-footer-color: #2F303A;
     --border-header: #ECECEC;
@@ -67,21 +67,48 @@ body {
 
 .header-link {
     font-weight: 500;
-
     letter-spacing: 0.02em;
     color: var(--menu-color)
 }
-
+.u-header-link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+    text-decoration: underline var(--accent-color);
+    text-underline-offset: 30px;
+}
 .header-contact-link {
     font-weight: 500;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    display: flex;
+}
+.header-contact-link {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+    display: flex;
 }
 
 .header-link:hover,
-.header-contact-link:hover {
+.header-link:focus,
+.header-contact-link:hover,
+.header-contact-link:focus {
     color: var(--accent-color);
+    fill: var(--accent-color);
     transition: 0.6s;
+}
+.header-contact-link:hover,
+.header-contact-link:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+    transition: 0.6s;
+}
+.header-contact-link svg {
+    width: 24px;
+    height: 16px;
+    display: inline-block;
+    fill: currentColor;
 }
 
 /* HERO */
@@ -196,7 +223,47 @@ body {
     position: relative;
     top:-68px;
 }
+.company {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    margin-bottom: 25px;
+}
+.company p{
+    font-weight: bold;
+    font-size: 36px;
+}
+.company-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.company-list li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #757575;
+    color: #757575;
+    fill: #757575;
+    width: 170px;
+    height: 92px;
+}
+.company-list li:hover{
+    color: #2196f3;
+    border-color: #2196f3;
+    transition: 0.6s
+}
+.company-list svg, .company-list use {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
 
+.work-item {}
 /* TEAMS  */
 .teams {
     padding: 94px 0;
@@ -339,6 +406,24 @@ body {
     color: var(--menu-color);
     border-radius: 4px;
     cursor: pointer;
+}/**/
+.portfolio-blue {
+    background-color: var(--accent-color);
+    opacity: 0;
+    color: var(--second-accent-color);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 294px;
+    width: 367px;
+    font-size: 28px;
+    top: 254px;
+    transition: opacity 0.6s ease;
+}
+
+.portfolio-item:hover .portfolio-blue {
+    opacity: 1;
 }
 
 .portfolio-button:hover {
@@ -361,11 +446,17 @@ body {
     border-right: 1px solid var(--border-portfolio);
     border-left: 1px solid var(--border-portfolio);
     flex-basis: calc((100% - 60px) / 3);/**/
-    
+
 }
 
 .portfolio-item:hover {
     box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06), 0 1px 1px 0 rgba(0, 0, 0, 0.12);/**/
+    transition: 0.6s;
+}
+.portfolio-item:hover .portfolio-blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.6s;
 }
 
