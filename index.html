@@ -17,7 +17,11 @@
         <div class="header-wrapper">
             <nav class="header-nav">
                 <ul class="header-list">
-                    <li class="header-item"><a class="u-header-link" href="">Студія</a></li>
+                        <li class="header-item"><a class="header-link active" href="index.html">Студія
+                        <div class="underlined">
+
+                        </div>
+                    </a></li>
                     <li class="header-item"><a class="header-link" href="portfolio.html">Портфоліо</a></li>
                     <li class="header-item">
                         <a class="header-link" id="contactLink" href="#">Контакти</a>
@@ -243,9 +247,31 @@
 <script src="./js.js"></script>
 <div class="modal" id="modal">
     <div class="modal-content">
+        <div class="modal-header">
+         <h1></h1>
         <button class="modal-close" id="modalClose">&times;</button>
-        <h2>Зв'язок з нами</h2>
-        <p>Залиште повідомлення, і ми зв’яжемося з вами найближчим часом.</p>
+        </div>
+            <form class="modal-form">
+                <label for="name">
+                    name
+                </label>
+                <input id="name" type="text" style="background-image: url(images/main-page/modal/pepole.svg);background-repeat: no-repeat;background-position: 10px, left;">
+                <label for="phone">
+                    phone
+                </label>
+                <input id="phone" type="number" style="background-image: url(images/main-page/modal/phone-black-18dp.svg);background-repeat: no-repeat;background-position: 10px, left;">
+                <label for="email">
+                    email
+                </label>
+                <input id="email" type="email" style="background-image: url(images/main-page/modal/email-black-18dp.svg);background-repeat: no-repeat;background-position: 10px, left;">
+                <div style="flex-direction: row;">
+                <input id="check" type="checkbox">
+                <label for="check">
+                    Погоджуюся з розсилкою та приймаю <span style="color: #2196f3"> Умови договору</span>
+                </label>
+                </div>
+                <button class="sub" type="submit">send</button>
+            </form>
     </div>
 </div>
 </body>
